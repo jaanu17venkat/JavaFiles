@@ -1,0 +1,15 @@
+package dynamicpolyDay10Work;
+
+public class Snake extends Animal{
+       	
+@Override
+void move() {
+	System.out.println("snake crawl!!!!!!");
+	
+}
+
+
+
+	
+}
+
