@@ -3,13 +3,13 @@ package dynamicpolyDay10Work;
 public class Animal {
 
 	void eat() {
-		System.out.println("all animals eat");
+		System.out.println("All animals eat");
 	}
 	void sleep() {
-		System.out.println("all animals sleep");
+		System.out.println("All animals sleep");
 	}
 	void move() {
-		System.out.println("not sure how it will move yet....");
+		System.out.println("Not sure how it will move yet....");
 	}
 	
 }
