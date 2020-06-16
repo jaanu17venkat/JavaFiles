@@ -4,12 +4,6 @@ package banking;
 
 public class SavingsAccount extends Account {
 
-       //construtor to perform
-
-      
-
-       //override to perform
-
        @Override
 
        boolean transact(Account another,String type,double amount) {

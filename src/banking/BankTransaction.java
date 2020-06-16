@@ -5,6 +5,9 @@ import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.*;
+import java.io.*;
+
 
 public class BankTransaction {
 
@@ -25,7 +28,8 @@ public class BankTransaction {
 void userOperation()
 
 {
-
+	
+try {
        int userChoice = 0;
 
        String transOpt=null, addChoice=null;
@@ -129,6 +133,13 @@ void userOperation()
        }while( addChoice.equalsIgnoreCase("yes"));
 
 }
+catch(Exception e)  
+{  
+     System.out.println("some error in code--> "+e);  
+   
+}  	
+}		
+	
 
  
 
@@ -154,10 +165,6 @@ int ageCalculation (String dob) {
 
 }
 
- 
-
-       //adds all accounts created to ArrayList accDetails      
-
        void populateAccounts(int accountNumber, String accType, String name, String dob, String phone, double balance, int age)
 
        {
@@ -179,16 +186,11 @@ int ageCalculation (String dob) {
               obj.setPhone(phone);
 
               accDetails.add(obj);
-
-             
-
-       }
-
-       //gets accNo as input and returns the relevant account object
+}
 
        Account findAccount(int accNo) {
 
-             
+             try {
 
               for(Account obj:accDetails){
 
@@ -197,11 +199,15 @@ int ageCalculation (String dob) {
                            return obj;
 
               }
+             
 
               System.out.println("Account does not exist");
 
               return null;
-
+             }
+             finally {
+            	 System.out.println("");
+             }
        }
 
        public static void main(String[] a) {
