@@ -105,7 +105,7 @@ public static 	boolean equals(Set<?>addAccount,Set<?>addAccounts) {
 		}
 	void Writefile1() {
 	try {
-		FileWriter mywriter = new FileWriter("C:\\Users\\janani\\eclipse-workspace\\SpineBizProject\\src\\day15Assi\\lib");
+		FileWriter mywriter = new FileWriter("C:\\Users\\janani\\eclipse-workspace\\SpineBizProject\\src\\day15Assignment\\lib");
 			mywriter.close();
 		System.out.println("Successfully wrote");
 	}catch(IOException e) {

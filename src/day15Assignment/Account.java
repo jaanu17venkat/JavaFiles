@@ -1,9 +1,10 @@
 package day15Assignment;
 import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 
-
-public  class Account {
+public  class Account implements Comparable<Account> {
 int age;
 String name,number,phone,acctype;
 float balance;
@@ -89,7 +90,7 @@ void GetAccountDetails() {
 	balance=scanner.nextFloat();
 
 }
-void PrintAccountDetils() {
+void PrintAccountDetails() {
 	System.out.println("Account type is :"+acctype);
 	System.out.println("Account number is :"+number);
 	System.out.println("Account name is :"+name);
@@ -97,6 +98,7 @@ void PrintAccountDetils() {
 	System.out.println("Accounter Age is :"+age);
 	System.out.println("Account balance is :"+balance);
 }
+
 @Override
 public String toString()
 {
@@ -114,17 +116,30 @@ public boolean equals(Object obj) {
 	
 }
 void Transact(double withdraw,float balance) {
+	try {
 	System.out.println("withdraw status");
 	System.out.println("enter the amount to withdraw");
 	withdraw=scanner.nextDouble();
 	if(withdraw<balance)
 	System.out.println("Please collect your money");
 	else
-		System.out.println("you does not have sufficient balance");
+		System.out.println("low balance");
 	
 	System.out.println("                                   ");
 	
-	
+}
+	catch(Exception e) {
+		System.out.println("low balance");
+		System.out.println(e.getMessage());
+		e.printStackTrace();
+	}
+	finally {
+		System.out.println("");
+	}
+}
+@Override
+public int compareTo(Account o) {
+	return this.getName().compareTo(o.getName());
 }
 }
 

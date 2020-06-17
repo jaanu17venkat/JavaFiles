@@ -96,6 +96,9 @@ try {
 
                                          }
 
+                                         else {
+                                        	 System.out.println("no sufficient amount");
+                                         }
                                          break;
 
                            case 2:
