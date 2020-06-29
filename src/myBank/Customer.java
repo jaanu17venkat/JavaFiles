@@ -26,6 +26,7 @@ Scanner scanner=new Scanner(System.in);
     	double balance = scanner.nextDouble();
     	System.out.println("enter the account type:");
     	String type = scanner.toString();
+    	
     	System.out.println("this is a current account");
     	int minBalance = 10000;
 		System.out.println("the minimum balance of currentaccount is:"+minBalance);

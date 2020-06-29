@@ -55,7 +55,7 @@ public class GenricExample {
 	public static void main(String[] args) {
 		GenricExample ge = new GenricExample();
 		ge.listSample();
-
+       
 	}
 
 }
